@@ -49,10 +49,7 @@ if ( ! class_exists( 'BKC_Action_Hooks_Markup' ) ) :
 		}
 
 		/**
-		 * Declare constants
-		 *
-		 * @since 1.0.0
-		 * @return void
+		 * Constructor
 		 */
 		public function __construct() {
 			$this->init();
@@ -69,6 +66,11 @@ if ( ! class_exists( 'BKC_Action_Hooks_Markup' ) ) :
 			add_action( 'wp', array( $this, 'hooks_markup' ) );
 		}
 
+		/**
+		 * Action Hooks Markup.
+		 *
+		 * @return void
+		 */
 		public function hooks_markup() {
 
 			$hooks = get_option( 'bkc-action-hooks', array() );

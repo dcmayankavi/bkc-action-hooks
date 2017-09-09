@@ -50,10 +50,7 @@ if ( ! class_exists( 'BKC_Action_Hooks_Loader' ) ) :
 		}
 
 		/**
-		 * Declare constants
-		 *
-		 * @since 1.0.0
-		 * @return void
+		 * Constructor
 		 */
 		public function __construct() {
 

@@ -57,17 +57,14 @@ if ( ! class_exists( 'BKC_Action_Hooks_Customizer' ) ) :
 		}
 
 		/**
-		 * Declare constants
-		 *
-		 * @since 1.0.0
-		 * @return void
+		 * Constructor
 		 */
 		public function __construct() {
 			$this->init();
 		}
 
 		/**
-		 * Include files required to plugin
+		 * Customizer Init
 		 *
 		 * @since 1.0.0
 		 * @return void
@@ -77,7 +74,7 @@ if ( ! class_exists( 'BKC_Action_Hooks_Customizer' ) ) :
 			add_action( 'customize_register',        array( $this, 'customize_register' ) );
 			add_action( 'customize_controls_enqueue_scripts', array( $this, 'controls_scripts' ) );
 			add_action( 'wp_ajax_reset_all_action_hooks', array( $this, 'reset_all_action_hooks_callback' ) );
-			add_action('after_switch_theme', array( $this, 'delete_action_hooks' ) );
+			add_action( 'after_switch_theme', array( $this, 'delete_action_hooks' ) );
 			if ( ! is_admin() ) {
 				add_action( 'wp_footer',             array( $this, 'update_action_hooks' ) );
 			}
@@ -130,12 +127,18 @@ if ( ! class_exists( 'BKC_Action_Hooks_Customizer' ) ) :
 			) );
 		}
 
+		/**
+		 * Update Action Hooks
+		 *
+		 * @since 1.0.0
+		 * @return void
+		 */
 		public function update_action_hooks() {
-			
+
 			$all_actions = self::get_action_hooks();
 
 			if ( ! $all_actions || empty( $all_actions ) ) {
-				
+
 				global $wp_actions;
 				$all_actions = array_keys( $wp_actions );
 				$start_index = array_search( 'get_header', $all_actions );
@@ -146,6 +149,12 @@ if ( ! class_exists( 'BKC_Action_Hooks_Customizer' ) ) :
 			}
 		}
 
+		/**
+		 * Gets the action hooks.
+		 *
+		 * @since 1.0.0
+		 * @return array|boolean  The action hooks.
+		 */
 		public static function get_action_hooks() {
 
 			if ( ! isset( self::$action_hooks ) || empty( self::$action_hooks ) ) {
@@ -158,10 +167,11 @@ if ( ! class_exists( 'BKC_Action_Hooks_Customizer' ) ) :
 		 * Customizer Setting
 		 *
 		 * @since 1.0.0
+		 * @param object $wp_customize WP Customizer Object.
 		 * @return void
 		 */
 		function customize_register( $wp_customize ) {
-			
+
 			$this->wp_customize = $wp_customize;
 
 			$wp_customize->register_control_type( 'BKC_Control_Repeater' );
@@ -202,7 +212,7 @@ if ( ! class_exists( 'BKC_Action_Hooks_Customizer' ) ) :
 					'action_hook' => array(
 						'id'          => 'action_hook',
 						'type'        => 'select',
-						'label'       => __( '', 'bkc-action-hooks' ),
+						'label'       => '',
 						'default'     => '',
 						'choices'     => $hooks,
 					),
@@ -218,7 +228,7 @@ if ( ! class_exists( 'BKC_Action_Hooks_Customizer' ) ) :
 						'label'       => __( 'Priority', 'bkc-action-hooks' ),
 						'default'     => '',
 					),
-				)
+				),
 			) ) );
 		}
 	}
