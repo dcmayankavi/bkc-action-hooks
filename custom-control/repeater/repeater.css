@@ -1,0 +1,94 @@
+.customize-control-repeater {
+	position: relative; 
+}
+.customize-control-repeater .repeater-fields .repeater-row {
+	border: 1px solid #e5e5e5;
+	margin-top: 0.5rem;
+	background: #eee;
+	position: relative; 
+}
+.customize-control-repeater .repeater-fields .repeater-row .repeater-field:last-child {
+	border-bottom: none;
+	padding-bottom: 0; 
+}
+.customize-control-repeater button.repeater-add {
+	margin-top: 1rem; 
+}
+.customize-control-repeater .repeater-row-content {
+	padding: 10px 15px;
+	background: #fff; 
+}
+.customize-control-repeater .repeater-field {
+	margin-bottom: 12px;
+	width: 100%;
+	clear: both;
+	padding-bottom: 12px;
+	border-bottom: 1px dotted #CCC; 
+}
+.customize-control-repeater .repeater-field .customize-control-title {
+	font-size: 13px;
+	line-height: initial; 
+}
+.customize-control-repeater .repeater-field .customize-control-description {
+	font-size: 13px;
+	line-height: initial; 
+}
+.customize-control-repeater .repeater-field-select select {
+	margin-left: 0; 
+}
+.customize-control-repeater .repeater-field-textarea textarea {
+	width: 100%;
+	resize: vertical; 
+}
+.customize-control-repeater .repeater-row-header {
+	background: white;
+	border-bottom: 1px solid #dfdfdf;
+	position: relative;
+	padding: 10px 15px;
+	height: auto;
+	min-height: 20px;
+	line-height: 30px;
+	overflow: hidden;
+	word-wrap: break-word; 
+}
+.customize-control-repeater .repeater-row-header .dashicons {
+	font-size: 1.4em;
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #a0a5aa; 
+}
+.customize-control-repeater .repeater-row-label {
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 20px;
+	word-break: break-all;
+	display: block;
+	width: 90%;
+	overflow: hidden;
+	height: 18px; 
+}
+.customize-control-repeater .repeater-row-remove {
+	color: #a00; 
+}
+.customize-control-repeater .repeater-row-remove:hover {
+	color: #f00; 
+}
+.customize-control-repeater .repeater-minimize {
+	line-height: 2.2em;
+	cursor: pointer;
+	height: 2.2em;
+	width: 2.2em;
+}
+.customize-control-repeater .repeater-row:first-child:last-child .repeater-add-delete {
+	display: none;
+}
+.customize-control-repeater .repeater-row .repeater-add-reset {
+	display: none;
+}
+.customize-control-repeater .repeater-row:first-child:last-child .repeater-add-reset {
+	display: initial;
+}
+.repeater-row.expanded .dashicons-arrow-down::before {
+	content: "\f142";
+}
