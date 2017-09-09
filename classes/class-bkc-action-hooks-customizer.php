@@ -77,6 +77,7 @@ if ( ! class_exists( 'BKC_Action_Hooks_Customizer' ) ) :
 			add_action( 'customize_register',        array( $this, 'customize_register' ) );
 			add_action( 'customize_controls_enqueue_scripts', array( $this, 'controls_scripts' ) );
 			add_action( 'wp_ajax_reset_all_action_hooks', array( $this, 'reset_all_action_hooks_callback' ) );
+			add_action('after_switch_theme', array( $this, 'delete_action_hooks' ) );
 			if ( ! is_admin() ) {
 				add_action( 'wp_footer',             array( $this, 'update_action_hooks' ) );
 			}
@@ -92,10 +93,22 @@ if ( ! class_exists( 'BKC_Action_Hooks_Customizer' ) ) :
 
 			// Validate nonce.
 			check_ajax_referer( 'reset-all-action-hooks', 'nonce' );
-			delete_option( 'bkc-frontend-actions' );
+			$this->delete_action_hooks();
 			wp_send_json_error( 'pass' );
 
 			wp_die();
+		}
+
+		/**
+		 * AJAX Customizer Reset
+		 *
+		 * @since 1.0.0
+		 * @return void
+		 */
+		public function delete_action_hooks() {
+
+			self::$action_hooks = array();
+			delete_option( 'bkc-frontend-actions' );
 		}
 
 		/**
