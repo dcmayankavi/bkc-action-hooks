@@ -1,4 +1,4 @@
-=== WP CLI ===
+=== BKC Action Hooks ===
 Contributors: dineshc
 Tags: wp-action, action-hooks, theme-hooks, wordpress-hooks
 Requires at least: 3
