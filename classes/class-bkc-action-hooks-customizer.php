@@ -1,8 +1,8 @@
 <?php
 /**
- * BKC Action Hooks Customizer Class
+ * Action Hooks Customizer Class
  *
- * @package BKC Action Hooks
+ * @package Action Hooks
  * @author Dinesh Chouhan
  */
 
