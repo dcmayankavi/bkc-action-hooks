@@ -1,14 +1,15 @@
-=== BKC Action Hooks ===
+=== Action Hooks ===
 Contributors: dineshc
+Donate link: https://www.paypal.me/dcmayankavi
 Tags: wp-action, action-hooks, theme-hooks, wordpress-hooks
 Requires at least: 3
 Tested up to: 4.8.1
 
-BKC Action Hooks will helps to add HTML markup on any action from Customizer with Live Preview.
+Action Hooks will helps to add HTML markup on any action from Customizer with Live Preview.
 
 == Description ==
 
-BKC Action Hooks providing live preview of Adding action hooks from customizer multiple time with Repeater. User can add HTML Markup, JavaScript, CSS if required. This plugin will support with all themes. It will list out all the applicable actions hooks for frontend.
+Action Hooks providing live preview of Adding action hooks from customizer multiple time with Repeater. User can add HTML Markup, JavaScript, CSS if required. This plugin will support with all themes. It will list out all the applicable actions hooks for frontend.
 
 == Installation ==
 
