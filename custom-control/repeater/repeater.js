@@ -3,7 +3,7 @@
  *
  * Handles the repeater
  *
- * @package BKC Action Hooks
+ * @package Action Hooks
  */
 
 wp.customize.controlConstructor['bkc-repeater'] = wp.customize.Control.extend({
