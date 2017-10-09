@@ -4,6 +4,8 @@ Donate link: https://www.paypal.me/dcmayankavi
 Tags: wp-action, action-hooks, theme-hooks, wordpress-hooks
 Requires at least: 3
 Tested up to: 4.8.1
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Action Hooks will helps to add HTML markup on any action from Customizer with Live Preview.
 
